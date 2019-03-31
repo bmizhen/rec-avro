@@ -13,6 +13,7 @@ setup(
     description='Avro schema and data converters supporting storing arbitrary nested python data structures.',
     long_description=README,
     long_description_content_type='text/markdown',
+    keywords = "avro json schema nested",
     url='https://github.com/bmizhen/rec-avro',
     author='Boris Mizhen',
     author_email='rec-avro@boriska.com',
