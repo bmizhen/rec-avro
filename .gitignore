@@ -9,3 +9,4 @@ dist
 .venv/
 *.pyc 
 src/rec_avro.egg-info
+.eggs
