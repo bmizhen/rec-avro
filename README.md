@@ -5,6 +5,11 @@ Rec-avro provides a generic Avro schema and converter functions that allow for s
 
 Tested in Python 3 only.
 
+## Installation
+```sh
+$ pip3 install rec-avro
+```
+
 ## Usage:
 ### With fastavro
 ```python
