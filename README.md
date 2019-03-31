@@ -39,7 +39,12 @@ assert loaded_json == json_objects()
 
 ## Development:
 ```sh
+# Running all tests:
+$ python setup.py pytest
+
+# Running tests manually
 $ pip3 install fastavro pytest
 $ python setup.py develop
 $ pytest tests/test_rec_avro.py
 ```
+

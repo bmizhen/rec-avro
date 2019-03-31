@@ -19,8 +19,8 @@ setup(
     license="MIT",
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
-    install_requires=[
-        'fastavro',
-        ]
-    )
+    install_requires=[],
+    setup_requires=["pytest-runner"],
+    tests_require=['fastavro', 'pytest']
+)
 
