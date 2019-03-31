@@ -1,17 +1,17 @@
-# rec-avro
+# rec-avro:
 Avro support for JSON and other nested data structures.
 
 Rec-avro provides a generic Avro schema and converter functions that allow for storing nested python data structures in avro.
 
 Tested in Python 3 only.
 
-## Installation
+## Installation:
 ```sh
 $ pip3 install rec-avro
 ```
 
 ## Usage:
-### With fastavro
+### With fastavro:
 ```python
 
 from fastavro import writer, reader, schema
@@ -37,7 +37,7 @@ with open('json_in_avro.avro', 'rb') as f_in:
 assert loaded_json == json_objects()
 ```
 
-## Development
+## Development:
 ```sh
 $ pip3 install fastavro pytest
 $ python setup.py develop
