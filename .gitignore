@@ -1,0 +1,11 @@
+.idea/
+.DS_Store
+__pycache__
+build
+dist
+.direnv
+.envrc
+.env
+.venv/
+*.pyc 
+src/rec_avro.egg-info
