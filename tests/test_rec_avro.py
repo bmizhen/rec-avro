@@ -45,8 +45,8 @@ def test_long_roundtrip():
 
 
 def test_avro_roundtrip():
-    data_in = [a for a, b in rec_test_data()]
-    data_out = [a for a, b in rec_test_data()]
+    data_in = [a for a, b in rec_test_data() if isinstance(a, (map, list))]
+    data_out = [a for a, b in rec_test_data()if isinstance(a, (map, list))]
     compare_avro_roundtrip(data_in, data_out)
 
 
@@ -74,6 +74,9 @@ def make_test_data(n):
         for i in range(n)
     )
 
+def test_rec_avro_marker():
+    s = schema.parse_schema(rec_avro_schema())
+    assert is_rec_avro_schema(s)
 
 def write_read(in_data):
     buff = io.BytesIO()

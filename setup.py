@@ -9,7 +9,7 @@ README = (HERE / 'README.md').read_text()
 
 setup(
     name='rec-avro',
-    version='0.0.1',
+    version='0.0.3',
     description='Avro schema and data converters supporting storing arbitrary nested python data structures.',
     long_description=README,
     long_description_content_type='text/markdown',

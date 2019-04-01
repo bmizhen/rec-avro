@@ -27,6 +27,7 @@ def rec_avro_schema(namespace='rec_avro'):
         'null', 'boolean', 'int', 'long', 'float', 'double', 'string', 'bytes']
 
     rec_object_schema = {
+        '__rec_avro_schema__': True,
         'namespace': namespace,
         'type': 'record',
         # using a named record is the only way to make a
@@ -43,7 +44,7 @@ def rec_avro_schema(namespace='rec_avro'):
         }]
     }
 
-    return primitive_types + [rec_object_schema]
+    return rec_object_schema
 
 
 def to_rec_avro_destructive(o, types_to_str=()):
@@ -143,3 +144,7 @@ def from_rec_avro_destructive(o):
         raise Exception('rec_object {"_": val} val must be Mapping or Iterable')
 
     return o
+
+
+def is_rec_avro_schema(s):
+    return s.get('__rec_avro_schema__', False)
