@@ -1,4 +1,5 @@
-from collections.abc import Iterable, MutableSequence, MutableMapping, Mapping
+from collections import OrderedDict
+from collections.abc import Iterable, Mapping, MutableMapping, MutableSequence
 from typing import Any
 
 
@@ -26,23 +27,23 @@ def rec_avro_schema(namespace='rec_avro'):
     primitive_types: list[Any] = [
         'null', 'boolean', 'int', 'long', 'float', 'double', 'string', 'bytes']
 
-    rec_object_schema = {
-        '__rec_avro_schema__': True,
-        'namespace': namespace,
-        'type': 'record',
+    rec_object_schema = OrderedDict(
+        __rec_avro_schema__=True,
+        namespace=namespace,
+        type='record',
         # using a named record is the only way to make a
         # recursive structure in avro, so a nested map becomes {'_': {}}
         # nested list becomes {'_': []}
         # because it is an avro record, the storage is efficient
-        'name': 'rec_object',
-        'fields': [{
-            'name': '_',
-            'type': [
-                {'type': 'map', 'values': primitive_types + ['rec_object']},
-                {'type': 'array', 'items': primitive_types + ['rec_object']}
+        name='rec_object',
+        fields=[OrderedDict(
+            name='_',
+            type=[
+                OrderedDict(type='map', values=primitive_types + ['rec_object']),
+                OrderedDict(type='array', items=primitive_types + ['rec_object'])
             ]
-        }]
-    }
+        )]
+    )
 
     return rec_object_schema
 
