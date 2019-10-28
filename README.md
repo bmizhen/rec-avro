@@ -3,7 +3,8 @@ Avro support for JSON and other nested data structures.
 
 Rec-avro provides a generic Avro schema and converter functions that allow for storing nested python data structures in avro.
 
-Tested in Python 3 only.
+## Requirements
+Python version 3.6.x or higher
 
 ## Installation:
 ```sh
