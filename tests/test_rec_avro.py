@@ -36,6 +36,10 @@ def test_from_rec_avro_destructive():
     for b, a in rec_test_data():
         assert from_rec_avro_destructive(a) == b
 
+def test_from_rec_avro_destructive_of_pure_json_object():
+    x = load_json('tests/test_data2.json')
+    assert from_rec_avro_destructive(x) == x
+
 
 def test_long_roundtrip():
     data_in = list(make_test_data(1000))
