@@ -126,7 +126,9 @@ def from_rec_avro_destructive(o):
         return o
 
     if isinstance(o, Mapping):
-        o = o['_']
+        if '_' in o:
+            o = o['_']
+
         if isinstance(o, Mapping):
             if isinstance(o, MutableMapping):
                 for k, v in o.items():
