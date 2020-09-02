@@ -1,4 +1,4 @@
-https://img.shields.io/pypi/dm/rec-avro
+![Download Counter](https://img.shields.io/pypi/dm/rec-avro)
 
 # rec-avro:
 Avro support for JSON and other nested data structures.
