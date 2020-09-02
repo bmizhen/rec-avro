@@ -1,5 +1,7 @@
-![Downloads](https://pepy.tech/badge/covid)
-![Donwloads/Month](https://pepy.tech/badge/covid/month)
+[![Downloads](https://pepy.tech/badge/rec-avro)](https://pepy.tech/project/rec-avro)
+
+[![Downloads](https://pepy.tech/badge/rec-avro/month)](https://pepy.tech/project/rec-avro/month)
+
 
 # rec-avro:
 Avro support for JSON and other nested data structures.
