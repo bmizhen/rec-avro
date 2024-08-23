@@ -1,3 +1,4 @@
+# see https://github.com/bmizhen/rec-avro/blob/master/LICENSE
 from setuptools import find_packages, setup
 import pathlib
 

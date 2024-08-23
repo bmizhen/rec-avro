@@ -1,3 +1,5 @@
+# see https://github.com/bmizhen/rec-avro/blob/master/LICENSE
+
 from collections import OrderedDict
 from collections.abc import Iterable, Mapping, MutableMapping, MutableSequence
 from typing import Any

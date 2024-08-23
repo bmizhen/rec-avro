@@ -1,3 +1,5 @@
+# see https://github.com/bmizhen/rec-avro/blob/master/LICENSE
+
 from rec_avro import *
 import io
 from fastavro import writer, reader, schema

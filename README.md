@@ -1,5 +1,8 @@
 [![Downloads](https://pepy.tech/badge/rec-avro)](https://pepy.tech/project/rec-avro)
 
+# LICENSE
+See https://github.com/bmizhen/rec-avro/blob/master/LICENSE
+
 # rec-avro:
 Avro support for JSON and other nested data structures.
 
